@@ -11,10 +11,13 @@ let button_create_input_table = document.getElementById('button-submit'),
 function createTable(rows, cols) {
     if(((typeof(rows) != "number") || (typeof(cols) != "number")) 
                    || ((rows <= 0) || (cols <= 0))
-                   || !((rows + cols) > 2)) {
-        return null;
+                   || !((rows + cols) >= 4)) {
+        input_cols.value = "";
+        input_rows.value = "";
+        alert("Required: cols+rows >= 4 !");
+        return;
     } else {
-        let true_probabylity = Number(0.8);
+        let true_probabylity = Number(0.7);
         input_array = [];
         let table = document.getElementById('table-input-matrix');
         for(let i = 0; i < rows; i++) {
@@ -42,20 +45,18 @@ function createTable(rows, cols) {
 }
 
 function proceedClick_createTable() {
-
-    if(rows != -1 && cols != -1) {
+    if((rows != -1 && cols != -1)||(!(rows+cols < 4))) {
         for(let row = 0; row < rows; row++) {
             document.getElementById("tr_input_" + String(row)).remove();
         }
     }
-
     rows = Number(input_rows.value);
     cols = Number(input_cols.value);
-    console.log(document.getElementById("table-input-matrix"));
     createTable(rows, cols);
-    button_fun.removeAttribute('hidden');
-    document.getElementById('proceed-container').removeAttribute('hidden');
-
+    if(!(rows+cols < 4)) {
+        button_fun.removeAttribute('hidden');
+        document.getElementById('proceed-container').removeAttribute('hidden');
+    }
 }
 
 function proceedClick_findRegions() {
