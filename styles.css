@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400&display=swap');
+
+body{
+    margin: 0%;
+    background: white;
+    font-family:'Jura', sans-serif;
+    font-size: 200%;
+}
+
+#task-inner{
+    padding-left: 1%;
+    padding-right: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
+    background-color: rgb(82, 108, 155);
+    margin-bottom: 3%;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+#header-lab{
+    padding-left: 2%;
+    padding-right: 3%;
+    padding-top: 0.1%;
+    padding-bottom: 0.2%;
+    font-weight: 900;
+    text-align: left;
+    background-color: rgb(82, 108, 155);
+    size: 50px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+#header-variant{
+    padding-left: 2%;
+    padding-right: 3%;
+    padding-top: 0.1%;
+    padding-bottom: 0.2%;
+    text-align: left;
+    margin-top: 1%;
+    margin-left: 0%;
+    margin-bottom: 2%;
+    background-color: rgb(82, 108, 155);
+}
+
+#header-task{
+    padding-left: 2%;
+    padding-right: 3%;
+    padding-top: 0.1%;
+    padding-bottom: 0.2%;
+    text-align: left;
+    font-weight: 500;
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-bottom: 0%;
+    background-color: rgb(82, 108, 155);
+}
+
+#div-main{
+    width: 60%;
+    height: 100%;
+    background: rgb(46, 47, 94);
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#form-task{
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 1%;
+    padding-bottom: 12%;
+}
+
+#task-text{
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    font-weight: 500;
+    margin-left: 5%;
+    background: rgb(130, 162, 221);
+    margin-top: 1%;
+    margin-bottom: 10px;
+    padding-left: 2%;
+    padding-bottom: 15px;
+    size: 1px;
+}
+
+#input-inner{
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    width: 60%;
+    margin: 0 auto;
+    background:rgb(0, 110, 184);
+}
+
+#input-cols{
+    font-size: 80%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    width:100%;
+    font-weight: 900;
+    font-family:'Jura', sans-serif;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#input-rows{
+    font-size: 80%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 3px;
+    width: 100%;
+    font-weight: 900;
+    font-family:'Jura', sans-serif;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#header-decision{
+    font-size: 200%;
+    margin-left: 5%;
+    margin-top: 0.5%;
+    width: 80%;
+}
+
+.button-submit{
+    font-size: 80%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 64, 148);
+    font-weight: 900;
+    margin-top: 20%;
+    padding: 8px 30px;
+    align-self: center;
+    font-family:'Jura', sans-serif;
+    border: 2px solid rgb(0, 64, 148);
+    border-radius: 6px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    word-wrap: break-word;
+}
+
+.button-submit:hover {
+    background-color: rgb(0, 44, 102);
+}
+
+#input-container{
+    width: 100%;
+}
+
+.table-box{
+    max-height: 500px;
+    max-width: 500px;
+    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    margin: 0 auto;
+}
+
+#form-for-table-input-matrix{
+    width: 30%;
+}
+
+.table-input-matrix{
+    margin: 0 auto;
+    border-spacing: 0 0;
+}
+
+.input-button{
+    padding: 0 0;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    position: relative;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 1px;
+    background-color: rgb(255, 255, 255);
+    height:40px;
+    width:40px;
+    cursor:pointer;
+}
+
+.input-button:hover{
+    background-color: rgb(129, 129, 129);
+    color:white;
+}
+
+
+.input-box{
+    display: inline-block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(82, 108, 155);
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+#div-input-data-wrapper{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.form-task-container{
+    width: 70%;
+    height: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-table-container{
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 0%;
+    display: inline;
+    width: 100%;
+    height: 230px;
+    margin-left: 0%;
+    
+}
+
+#form-inner{
+    width: 100%;
+}
+
+#form-for-table-input-matrix{
+    width: 100%;
+    display: inline;
+}
+
+#button-get-answer{
+    margin-top: 0%;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#proceed-container{
+    margin-top: 0%;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    height: 100%;
+    max-height: 600px;
+}
+
+#label_to_answer{
+    margin: 0 auto;
+}
+
+#output-container{
+    font-size: 400%;
+    font-weight: 900;
+    text-align: center;
+    width: 100%;
+    margin: 1% auto;
+    background-color: rgb(1, 128, 128);
+    border: 2px solid white;
+    border-radius: 8px;
+    padding-top: 2%;
+    padding-bottom: 7%;
+}
