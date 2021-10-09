@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-let button_create_input_table = document.getElementById('button-submit'),
-    input_cols = document.getElementById('input-cols'),
-    input_rows = document.getElementById('input-rows'),
-    button_fun = document.getElementById('button-get-answer'),
+let buttonCreateInputMatrix = document.getElementById('create_matrix'),
+    input_cols = document.getElementById('input_cols'),
+    input_rows = document.getElementById('input_rows'),
+    buttonFun = document.getElementById('proceed_matrix'),
+    visualInputBox = document.getElementById('visual_input_data_matrix'),
     rows = Number(-1),
     cols = Number(-1),
     input_array = [];
@@ -19,52 +20,48 @@ function createTable(rows, cols) {
     } else {
         let true_probabylity = Number(0.7);
         input_array = [];
-        let table = document.getElementById('table-input-matrix');
         for(let i = 0; i < rows; i++) {
             input_array.push(i);
             input_array[i] = [];
-            let tr = document.createElement('tr');
-            tr.id = "tr_input_" + String(i);
-            tr.className = "tr_input";
-            table.appendChild(tr);
+            let row_container = document.createElement('div');
+            row_container.id = "row_container_" + String(i);
+            row_container.className = "row_container container";
+            visualInputBox.appendChild(row_container);
             for(let j = 0; j < cols; j++) {
-                let td = document.createElement('td');
-                td.id = "td_input";
-                td.className = "td_input";
-                let input_button = document.createElement('button');
-                input_button.id = "a[" + String(i) + "][" + String(j) + "]";
-                input_button.className = 'input-button';
-                td.appendChild(input_button);
-                tr.appendChild(td);
+                let cell = document.createElement('div');
+                cell.id = "a[" + String(i) + "][" + String(j) + "]";
+                cell.className = "input_cell";
+                row_container.appendChild(cell);
                 let value = Number(random_numberoboolean_value(true_probabylity));
                 input_array[i].push(value);
-                paint_button(i, j)
+                paint_button(i, j);
             }
         }
+        console.log(input_array);
     }
 }
 
 function proceedClick_createTable() {
     if((rows != -1 && cols != -1)||(!(rows+cols < 4))) {
         for(let row = 0; row < rows; row++) {
-            document.getElementById("tr_input_" + String(row)).remove();
+            document.getElementById("row_container_" + String(row)).remove();
         }
     }
     rows = Number(input_rows.value);
     cols = Number(input_cols.value);
     createTable(rows, cols);
     if(!(rows+cols < 4)) {
-        button_fun.removeAttribute('hidden');
-        document.getElementById('proceed-container').removeAttribute('hidden');
+        buttonFun.removeAttribute('hidden');
+        document.getElementById('secondary_input_data_container').removeAttribute('hidden');
     }
 }
 
 function proceedClick_findRegions() {
     let result = String(findRegions(input_array));
     document.getElementById('label_to_answer').textContent = "Ответ: " + result;
-    button_fun.removeAttribute("hidden");
+    buttonFun.removeAttribute("hidden");
     document.getElementById('label_to_answer').removeAttribute('hidden');
-    document.getElementById('output-container').removeAttribute('hidden');
+    document.getElementById('output_wrapper').removeAttribute('hidden');
 }
  
 const random_numberoboolean_value = (true_probabylity) => {
@@ -98,33 +95,7 @@ function paint_button(i, j) {
     }
 }
 
-function find_sum_of_two_least_elems(arr) {
-    if(!(Array.isArray(arr))) {
-        return -1;
-    } else {
-        let min1 = Infinity;
-        let min2 =  Infinity;
-        for(let i = 0; i < arr.length; i++) {
-            for(let j = 0; j < arr[0].length; j++){
-                if((typeof(arr[i][j]) != 'number')
-                    || (arr[i][j] == null)){
-                        console.log(i, j);
-                        return -3;
-                } else if(typeof(arr[i][j]) == 'number') {
-                    if((arr[i][j] < min1)&&(arr[i][j] >= 0)) {
-                        min1 = min2;
-                        min2 = arr[i][j];
-                    } else if((arr[i][j] <= min2)&&(arr[i][j] >= 0)) {
-                        min1 = arr[i][j];
-                    }
-                }
-            }
-        }
-        return (min1 + min2);
-    }
-}
-
-function button_change_value(i, j) {
+function buttonChangeValue(i, j) {
     if(typeof(i) != "number" || typeof(j) != "number") {
         alert("Wrong value of adress!");
         return;
@@ -150,7 +121,7 @@ function findRegions() {
     return String("[Here should be the result!]");
 }
 
-button_create_input_table.addEventListener('click', proceedClick_createTable);
+buttonCreateInputMatrix.addEventListener('click', proceedClick_createTable);
 
-button_fun.addEventListener('click', proceedClick_findRegions);
+buttonFun.addEventListener('click', proceedClick_findRegions);
 })

@@ -11,7 +11,65 @@
     <title>PROJECT: REGIONS_SAMOILOV</title>
 </head>
 <body>
-    <script src="./create_dom_tree.js"></script>
+    <div id="main_wrapper" class="wrapper main">
+        <div id="task_wrapper" class="wrapper task">
+            <h1 id="name_header" class="name task">
+                Курсовой проект
+            </h1>
+
+            <h1 id="task_header_variant" class="variant task">
+                Вариант №2
+            </h1>
+
+            <h1 id="task_header" class="task">
+                Задание:
+            </h1>
+
+            <div id="task_box" class="task box">
+                <h2 id = "task_header_name" class="header task name">
+                    Разработка скрипта «Количество обособленных регионов»
+                </h2>
+
+
+                <p id="task_issue" class="task issue">
+                    Область задана прямоугольной матрицей,
+                    состоящей из нулей и единиц.
+                    Подсчитайте количество разных регионов<span style="font-size: 70%;"><sup>1, 2</sup></span>
+                    и верните результат.
+                </p>
+
+
+                <p id="task_comment" class="task">
+                    <span style="font-size: 70%;"><sup>1 </sup></span>Отдельный регион - это совокупность единиц,
+                    связанных между собой по горизонтали и вертикали.
+                    <br>
+                    <span style="font-size: 70%;"><sup>2 </sup></span>В регионе могут быть пустые пространства.
+                </p>
+            </div>
+        </div>
+
+        <div id="input_wrapper" class="wrapper input">
+            <div id="decision_box" class="decision box">
+                <h1 id="decision_header" class="decision">Решение:</h1>
+            </div>
+            <div id="primary_input_data_container" class="primary input_data container">
+                <div id="decision_input_data_container_inner" class="primary input_data container">
+                    <input type="number" placeholder="Rows..." id="input_rows" class="input_rows input_data primary" step="1" min="2">
+                    <input type="number" placeholder="Cols..." id="input_cols" class="input_cols input_data primary" step="1" min="2">
+                    <button type="button" id="create_matrix" class="create_matrix primary input_data">Get input array</button>
+                </div>
+
+                <div id="secondary_input_data_container" class="input_data container seconadary" hidden>
+                    <div id="visual_input_data_matrix" class="secondary visual input_data matrix"></div>
+                    <button id="proceed_matrix" class="secondary proceed" hidden>Get answer</button>
+                </div>
+            </div>
+        </div>    
+
+        <div id="output_wrapper" class="wrapper output" hidden>
+            <label hidden id="label_to_answer" class="label_to_answer"></label>
+        </div>       
+    </div>
     <script src="./add_functions.js"></script>
 </body>
 </html>
