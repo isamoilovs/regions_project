@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400&display=swap');
+
+body{
+    margin: 0%;
+    background: white;
+    font-family:'Jura', sans-serif;
+    font-size: 200%;
+}
+
+.wrapper{
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
+    background-color: rgb(82, 108, 155);
+    margin-bottom: 3%;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.wrapper.main{
+    width: 60%;
+    margin: 0 auto;
+    border: 0px;
+    border-radius: 0px;
+}
+
+
+#primary_input_data_container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#input_wrapper{
+    flex-direction: column;
+}
+
+.primary{
+    font-size: 80%;
+    width: 100%;
+    font-weight: 900;
+    font-family:'Jura', sans-serif;
+    position: relative;
+}
+
+#create_matrix{
+    color: rgb(0, 0, 0);
+    background-color: rgb(75, 155, 255);
+    margin-top: 20%;
+    padding: 8px 30px;
+    align-self: center;
+    border: 2px solid rgb(75, 155, 255);
+    border-radius: 6px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    word-wrap: break-word;
+}
+
+#create_matrix:hover {
+    background-color: rgb(0, 44, 102);
+    border: 2px solid rgb(0, 44, 102);
+    color: rgb(255, 255, 255);
+}
+
+#proceed_matrix{
+    color: rgb(0, 0, 0);
+    background-color: rgb(75, 155, 255);
+    align-self: center;
+    border: 2px solid rgb(75, 155, 255);
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+#secondary_input_data_container{
+    display: inline;
+    margin: 0 auto;
+}
+
+#decision_input_data_container_inner{
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    width: 60%;
+    margin: 0 auto;
+    background:rgb(0, 110, 184);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.row_container{
+    display: flex;
+}
+
+.input_cell{
+    width: 20px;
+    height: 20px;
+}
+
+#visual_input_data_matrix{
+    margin: 5% auto;
+}
